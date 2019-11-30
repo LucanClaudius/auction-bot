@@ -26,8 +26,8 @@ module.exports.run = async (bot, message, args) => {
                 //set base values for bidder
                 auction.bidders[`${bidder.id}`] = {};
                 auction.bidders[`${bidder.id}`].nickname = bidder.nickname;
-                auction.bidders[`${bidder.id}`].money = args[2]
-                auction.bidders[`${bidder.id}`].items = {};
+                auction.bidders[`${bidder.id}`].money = args[2];
+                auction.bidders[`${bidder.id}`].items = [];
 
                 //update auction json file with bidder
                 fs.writeFile(`./auction-${auction.name}.json`, JSON.stringify(auction), function () {
