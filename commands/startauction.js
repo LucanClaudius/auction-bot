@@ -59,7 +59,7 @@ module.exports.run = async (bot, message, args) => {
 
                                 //remove bidders money, add item to bidder and send confimation message
                                 auction.bidders[`${bidMessage.author.id}`].money -= currentBid;
-                                auction.bidders.items.push(`${item}`);
+                                auction.bidders[`${bidMessage.author.id}`].items.push(`${item}`);
 
                                 bidMessage.channel.send(`\`${auction.bidders[`${bidMessage.author.id}`].nickname}\` has bought \`${item}\` for \`${currentBid}\` money.`);
 
