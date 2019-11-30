@@ -1,0 +1,22 @@
+{
+  "name": "auction-bot",
+  "version": "1.0.0",
+  "description": "Discord bot used for hosting auctions where one or more users bid on items.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucanClaudius/auction-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucanClaudius/auction-bot/issues"
+  },
+  "homepage": "https://github.com/LucanClaudius/auction-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
