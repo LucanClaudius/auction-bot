@@ -57,6 +57,9 @@ module.exports.run = async (bot, message, args) => {
                             auctionCountdown = setTimeout(function () {
                                 collector.stop();
 
+                                //add sold item to auction sold list
+                                auction.sold.push(`${item} bought by ${auction.bidders[`${bidMessage.author.id}`].nickname}`)
+
                                 //remove bidders money, add item to bidder and send confimation message
                                 auction.bidders[`${bidMessage.author.id}`].money -= currentBid;
                                 auction.bidders[`${bidMessage.author.id}`].items.push(`${item}`);
