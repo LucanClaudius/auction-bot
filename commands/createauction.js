@@ -11,6 +11,7 @@ module.exports.run = async (bot, message, args) => {
         let auction = {};
         auction.name = args[0];
         auction.bidders = {};
+        auction.sold = [];
         
         //create auction json file
         fs.writeFile(`./auction-${auction.name}.json`, JSON.stringify(auction), function () {
